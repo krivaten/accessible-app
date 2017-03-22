@@ -1,0 +1,13 @@
+<h1>Currency</h1>
+
+<p>Much like we mentioned with our <code>ui-num</code> component, numbers are hard to get presented well with screen readers. In that same vein comes the challenge of reading out currencies.</p>
+
+<p>If you see the value {{ui-currency '53.25'}}, you will read that in your head as, "fifty three dollars and twenty five cents". However, a screen reader will read it as "dollars five three two five" (Which is not even correct). Again we are faced with that same problem as with numbers, but requiring a little more finesse.</p>
+
+<p>So that is the problem we tackled with the <code>ui-currency</code> component. It will read currencies back to you as we tend to read them in our heads.</p>
+
+<h2>Examples</h2>
+
+<p>Without using this component a screen reader will present the following dollar amount as <em>$243.47</em>. But when we drop in our component, that same amount is presented as <em>{{ui-currency '243.47'}}</em>. If your screen reader is turned off you wouldn't notice a difference. But with a screen reader you will hear that one is completely incorrect, while the other just makes sense.</p>
+
+<p>For the sake of example, some more dollar amounts are {{ui-currency '12'}}, {{ui-currency '0.25'}}, and {{ui-currency '831241.87'}}.</p>

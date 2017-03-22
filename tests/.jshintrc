@@ -26,6 +26,7 @@
   "node": false,
   "browser": false,
   "boss": true,
+  "expr": true,
   "curly": true,
   "debug": false,
   "devel": false,

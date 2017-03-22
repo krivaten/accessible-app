@@ -1,0 +1,6 @@
+<h1>Icons</h1>
+
+<p>This page is made to feature the <code>ui-icon</code> component. While Font Awesome does a pretty good job of using unicode characters that screen readers won't read, I've added one manual example in the CSS of this Twiddle to show why this component is important.</p>
+
+<h2>Example Uses</h2>
+<p><i class="fa fa-crap"></i> But you did. Why? Because CSS is adding content to the DOM, via the <code>before</code> attribute, that a screen reader can read, so it does. If you want assistive technology to ignore an icon, you need the <code>aria-hidden</code> attribute <span aria-hidden="true">(Example: {{ui-icon 'hashtag'}} or {{ui-icon 'bug'}})</span>. Alternatively, if you want a screen reader to state what that icon is for, then use the <code>aria-label</code> attribute to provide a description for the icon (Example: {{ui-icon 'trash' label='Delete'}} or {{ui-icon 'home' label='Navigate to home page'}}).</p>

@@ -1,0 +1,56 @@
+<div class="container">
+    <header class="navbar navbar-inverse">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#" aria-label="Accessibility">A11Y</a>
+        </div>
+        <nav id="navbar" class="navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li>
+                    {{#link-to 'index'}}
+                        {{ui-icon 'home' class="fa-fw"}}
+                        Home
+                    {{/link-to}}
+                </li>
+                <li>
+                    {{#link-to 'icons'}}
+                        {{ui-icon 'rocket' class="fa-fw"}}
+                        Icons
+                    {{/link-to}}
+                </li>
+                <li>
+                    {{#link-to 'inputs'}}
+                        {{ui-icon 'archive' class="fa-fw"}}
+                        Inputs
+                    {{/link-to}}
+                </li>
+                <li>
+                    {{#link-to 'alerts'}}
+                        {{ui-icon 'bell' class="fa-fw"}}
+                        Alerts
+                    {{/link-to}}
+                </li>
+                <li>
+                    {{#link-to 'numbers'}}
+                        {{ui-icon 'hashtag' class="fa-fw"}}
+                        Numbers
+                    {{/link-to}}
+                </li>
+                <li>
+                    {{#link-to 'currency'}}
+                        {{ui-icon 'usd' class="fa-fw"}}
+                        Currency
+                    {{/link-to}}
+                </li>
+            </ul>
+        </nav>
+    </header>
+</div>
+
+<main class="container">
+    <div class="alert alert-warning">
+        {{ui-icon 'warning-sign' label='Warning:'}}
+        Be sure to turn on your screen reader (⌘+F5 on Mac)!
+    </div>
+    {{focusing-outlet}}
+</main>
+

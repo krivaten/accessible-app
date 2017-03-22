@@ -1,0 +1,23 @@
+<h1>Alerts</h1>
+
+<p>There will be times when you need to let a user know when something has changed in the DOM. Typically, we build alert systems to do this. However, screen readers won't necessarily pick up on those notifications unless we tell them to. That's where the <code>ui-alert</code> component comes in. It renders a container that will be used for alerts, and will be read back to the user when their content changes.</p>
+
+<h2>Examples</h2>
+
+<h3>Polite</h3>
+<p>This first example will be populated when you click the buttons below. By default, the screen reader will wait until it is done reading whatever it is currently presenting, before moving on to the notification. This is because the component is using the <code>aria-live</code> attribute, set to "polite".</p>
+
+<button class="btn btn-primary" onclick={{action (mut messageOne) 'Can a kangaroo jump higher than a house?'}}>Show First Message</button>
+<button class="btn btn-secondary" onclick={{action (mut messageOne) 'Of course, a house doesn’t jump at all.'}}>Show Second Message</button>
+
+{{ui-alert title='Joke' message=messageOne}}
+
+<h3>Assertive</h3>
+<p>In the event that we need the screen reader to stop immediately and present the updated content back to the user, we can pass in the attribute <code>live</code> with a value of <em>assertive</em>, which will do just that.</p>
+
+<button class="btn btn-primary" onclick={{action (mut messageTwo) 'This is a test of the emergency broadcast system'}}>Show First Message</button>
+<button class="btn btn-secondary" onclick={{action (mut messageTwo) 'Broadcasters, in cooperation with the FCC and other authorities have developed this system to keep you informed in the event of an emergency'}}>Show Second Message</button>
+
+{{ui-alert live='assertive' type='danger' title='Emergency Broadcast System' message=messageTwo}}
+
+

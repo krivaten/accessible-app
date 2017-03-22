@@ -1,0 +1,25 @@
+<h1>Inputs</h1>
+
+<p>Forms are huge buckets of trouble when it comes to accessibility. That's why I want to demo this <code>ui-input</code> component. A nice feature in this component is that it will yell at us if we try to use it without providing a label. This ensures that other developers who may not be informed on accessibility don't produce inaccessible code.</p>
+
+<h2>Examples</h2>
+
+<form>
+    <p>When you focus on the following input, a screen reader will give you no indication as to what the field is for:</p>
+    <div class="form-group">
+        <label>Anonymous Label</label>
+        {{input value=anonymous class="form-control"}}
+    </div>
+
+    <p>However, when labels correctly reference their inputs, screen readers can announce the labels of the field when they are focused on:</p>
+    {{ui-input value=name label='Name'}}
+
+    {{ui-input type='email' value=email label='Email'}}
+
+    <p>By passing in a <code>yield</code> block, we are able to even use other input types as well:</p>
+    {{#ui-input label='Message' labelHidden=true description='What would you like to say?' as |component|}}
+        {{textarea id=component.inputId class='form-control' value=message}}
+    {{/ui-input}}
+
+    <button class="btn btn-primary">Submit</button>
+</form>

@@ -1,0 +1,11 @@
+<h1>Numbers</h1>
+
+<p>When it comes to numbers, screen readers don't do all that well. If you have a number like {{ui-num '4235'}}, most screen readers will read that as "four two three five". But the problem is, that isn't how we think of numbers greater than nine. We think of the value as a whole, so when a screen reader suddenly starts reading single digits back to a user that is meant to be a large, multi-digit number, it can be frustrating and confusing.</p>
+
+<p>So in an effort to help those using screen readers, we are going to showcase a nice component called <code>ui-num</code>, that will wrap a number in a span with an aria-label that writes out the number as words.</p>
+
+<h2>Examples</h2>
+
+<p>Without using this component a screen reader will present the following number as <em>397,349,573</em>. But when we drop in our component, that same number is presented as <em>{{ui-num 397349573}}</em>. If your screen reader is turned off you wouldn't notice a difference. But with a screen reader you will hear that one is painful to listen to, while the other is rather pleasant.</p>
+
+<p>Some more examples are the numbers {{ui-num '42.35'}}, {{ui-num 1984}}, and {{ui-num '8675309103984.2'}}.</p>
